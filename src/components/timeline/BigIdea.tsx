@@ -3,12 +3,12 @@ import { bigIdea } from "../../assets/images";
 
 export const BigIdea: React.FC = () => {
   return (
-    <div className=" border-t-[0.1px] border-purple-300">
+    <div className=" border-t-[0.1px] border-[#2e2053]">
       <div className="md:flex justify-between items-center px-5 md:px-20 py-10">
-        <div className="md:w-1/2">
+        <div className="flex-1">
           <img src={bigIdea} alt="big idea!" />
         </div>
-        <div className="relative md:w-1/2 text-center md:text-left ">
+        <div className="relative flex-1 text-center md:text-left ">
           <div className="relative">
             <h3 className="class-display font-bold text-lg md:text-2xl">
               Introduction to getlinked{" "}

@@ -7,3 +7,5 @@ export const titleSmall = `${imagePath}/TitleSmall.png`
 export const manWearGlass = `${imagePath}/man-wearing-smart (1).svg`
 export const starBall = `${imagePath}/ballstar.svg`
 export const bigIdea = `${imagePath}/Thebigidea.png`
+export const rulesregulation = `${imagePath}/ruleandregulation.png`
+export const criteria = `${imagePath}/criteria.png`

@@ -5,7 +5,7 @@ import { CgMenuLeft } from 'react-icons/cg'
 
 export const Navbar:React.FC = () => {
   return (
-    <nav className='fixed px-5 md:px-20 flex justify-between items-center w-full bg-[#150E28] text-white py-6 border-b-[1px]  mx-auto z-50'>
+    <nav className='fixed px-5 md:px-20 flex justify-between items-center w-full bg-[#150E28] text-white py-6 border-b-[1px] border-[#2e2053] mx-auto z-50'>
         <Link to='/' className='class-display font-bold text-2xl'>get<span className='text-[#d434fe]'>linked</span></Link>
 
     <div className='hidden md:flex justify-between items-center text-sm'>
