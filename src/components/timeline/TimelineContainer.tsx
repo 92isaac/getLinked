@@ -3,6 +3,7 @@ import { HeroSection } from './HeroSection'
 import { BigIdea } from './BigIdea'
 import { RulesAndRegulation } from './RulesAndRegulation'
 import { Criteria } from './Criteria'
+import { Faqs } from './Faqs'
 
 export const TimelineContainer:React.FC = () => {
   return (
@@ -11,6 +12,7 @@ export const TimelineContainer:React.FC = () => {
         <BigIdea />
         <RulesAndRegulation />
         <Criteria />
+        <Faqs />
     </div>
   )
 }
