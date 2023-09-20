@@ -3,7 +3,7 @@ import { SponsorsGallery } from "./SponsorsGallery";
 
 export const PartnersAndSponsors: React.FC = () => {
   return (
-    <div className="px-5 md:px-20">
+    <div className="px-5 mt-5 mb-16 md:px-20">
       <div className="text-center">
         <h2 className="class-display font-bold text-lg my-3 md:text-2xl">Partners and Sponsors</h2>
         <p className="text-sm montserrat my-6 pb-5">

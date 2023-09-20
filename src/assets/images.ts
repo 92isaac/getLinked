@@ -17,3 +17,5 @@ export const Paybox = `${imagePath}/Paybox.png`
 export const Visual6 = `${imagePath}/Vizual6.png`
 export const winwise3 = `${imagePath}/winwise3.png`
 export const wisper4 = `${imagePath}/wisper4.png`
+export const manonpadlock = `${imagePath}/manonpadlock.png`
+export const Vector = `${imagePath}/Vector.png`

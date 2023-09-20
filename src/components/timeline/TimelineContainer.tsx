@@ -7,6 +7,7 @@ import { Faqs } from './Faqs'
 import { PriceAndReward } from './PriceAndReward'
 import { EventTimeline } from './EventTimeline'
 import { PartnersAndSponsors } from './PartnersAndSponsors'
+import { PrivacyPolicyAndTerms } from './PrivacyPolicyAndTerms'
 
 export const TimelineContainer:React.FC = () => {
   return (
@@ -19,6 +20,7 @@ export const TimelineContainer:React.FC = () => {
         <EventTimeline />
         <PriceAndReward />
         <PartnersAndSponsors />
+        <PrivacyPolicyAndTerms />
     </div>
   )
 }
