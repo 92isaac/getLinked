@@ -8,6 +8,7 @@ import { PriceAndReward } from './PriceAndReward'
 import { EventTimeline } from './EventTimeline'
 import { PartnersAndSponsors } from './PartnersAndSponsors'
 import { PrivacyPolicyAndTerms } from './PrivacyPolicyAndTerms'
+import { Footer } from './Footer'
 
 export const TimelineContainer:React.FC = () => {
   return (
@@ -21,6 +22,7 @@ export const TimelineContainer:React.FC = () => {
         <PriceAndReward />
         <PartnersAndSponsors />
         <PrivacyPolicyAndTerms />
+        <Footer />
     </div>
   )
 }
