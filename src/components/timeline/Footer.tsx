@@ -99,6 +99,7 @@ export const Footer: React.FC = () => {
       <div className="flex justify-center items-center py-6">
         <p>All rights reserved. &copy; getlinked Ltd.</p>
       </div>
+
     </footer>
   );
 };

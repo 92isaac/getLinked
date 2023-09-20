@@ -28,3 +28,8 @@
 .animate-blink {
   animation: blink 1s infinite;
 }
+
+.jus-right:nth-child(odd){
+  text-align: center;
+  border-right: 2px solid red;
+}
