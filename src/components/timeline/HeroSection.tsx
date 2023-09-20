@@ -25,15 +25,15 @@ export const HeroSection: React.FC = () => {
             Participate in getlinked tech Hackathon 2023 stand
             <br className="hidden md:block"/> a chance to win a Big prize
           </p>
-          <Button title="Register" className="mt-4 pt-2" OnClick />
+          <Button title="Register" className="mt-4 pt-2" OnClick/>
           <Countdowm className={`mt-5 md:mt-16 justify-center md:justify-start`}/>
         </div>
         <div className="relative">
-          <div className="absolute top-9 right-0 z-10">
-            <img src={manWearGlass} alt="" className="-z-10" />
+          <div className="absolute right-0 z-10">
+            <img src={starBall} alt="" className="z-10" />
           </div>
           <div className="top-10 right-0 z-50">
-            <img src={starBall} alt="" className="z-10" />
+            <img src={manWearGlass} alt="" className="z-10" />
           </div>
         </div>
       </div>

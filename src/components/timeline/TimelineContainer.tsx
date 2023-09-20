@@ -4,6 +4,9 @@ import { BigIdea } from './BigIdea'
 import { RulesAndRegulation } from './RulesAndRegulation'
 import { Criteria } from './Criteria'
 import { Faqs } from './Faqs'
+import { PriceAndReward } from './PriceAndReward'
+import { EventTimeline } from './EventTimeline'
+import { PartnersAndSponsors } from './PartnersAndSponsors'
 
 export const TimelineContainer:React.FC = () => {
   return (
@@ -13,6 +16,9 @@ export const TimelineContainer:React.FC = () => {
         <RulesAndRegulation />
         <Criteria />
         <Faqs />
+        <EventTimeline />
+        <PriceAndReward />
+        <PartnersAndSponsors />
     </div>
   )
 }
