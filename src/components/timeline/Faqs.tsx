@@ -1,10 +1,10 @@
 import React from "react";
-import { rulesregulation } from "../../assets/images";
+import { casualworker } from "../../assets/images";
 import Accordion from "../../utils/Accordion";
 
 export const Faqs: React.FC = () => {
   return (
-    <div className=" border-t-[0.1px] border-[#2e2053]">
+    <div className=" border-t-[0.1px] border-[#2e2053]" id="#">
       <div className="flex flex-col md:flex md:flex-row justify-between items-center px-8 md:px-20 py-10">
         <div className="relative flex-1 text-center md:text-left ">
           <div className="relative">
@@ -25,7 +25,7 @@ export const Faqs: React.FC = () => {
           ))}
         </div>
         <div className="flex-1">
-          <img src={rulesregulation} alt="rules !" />
+          <img src={casualworker} alt="rules !" />
         </div>
       </div>
     </div>

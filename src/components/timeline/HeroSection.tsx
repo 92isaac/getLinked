@@ -1,11 +1,13 @@
 import React from "react";
 import { manWearGlass, starBall, title, underLine } from "../../assets/images";
 import { Button } from "../../utils/Button";
+import { PurplrBg } from "../../utils/purplrBg";
 import { Countdowm } from "./Countdowm";
 
 export const HeroSection: React.FC = () => {
   return (
-    <section className="md:pl-20">
+    <section className="relative md:pl-20">
+      <PurplrBg className="w-1/2 -top-48 z-10 absolute"/>
       <div className="flex md:justify-end justify-center text-white">
         <div className="md:pr-10">
           <h3 className="md:text-2xl font-bold italic">
@@ -29,6 +31,7 @@ export const HeroSection: React.FC = () => {
           <Countdowm className={`mt-5 md:mt-16 justify-center md:justify-start`}/>
         </div>
         <div className="relative">
+      <PurplrBg className="w-full -top-32 z-10 absolute"/>
           <div className="absolute right-0 z-10">
             <img src={starBall} alt="" className="z-10" />
           </div>

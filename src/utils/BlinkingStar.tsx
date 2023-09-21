@@ -17,8 +17,8 @@ const BlinkingStar: React.FC<BlinkingStarProps> = ({ colour }) => {
   }, [colour]);
 
   return (
-    <div className="text-4xl" style={{ color }}>
-      <FaStar  className="w-3" />
+    <div className="text-4xl py-3" style={{ color }}>
+      <FaStar  className="w-4 " />
     </div>
   );
 };
