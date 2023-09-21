@@ -12,7 +12,7 @@ import { Footer } from './Footer'
 
 export const TimelineContainer:React.FC = () => {
   return (
-    <div className='pt-32 text-white'>
+    <>
         <HeroSection />
         <BigIdea />
         <RulesAndRegulation />
@@ -23,6 +23,6 @@ export const TimelineContainer:React.FC = () => {
         <PartnersAndSponsors />
         <PrivacyPolicyAndTerms />
         <Footer />
-    </div>
+    </>
   )
 }

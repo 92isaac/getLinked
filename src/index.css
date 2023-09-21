@@ -16,6 +16,14 @@
   font-family: 'Unica One', cursive;
 }
 
+
+
+.bgImage{
+  background: url(../Rectangle\ 10.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 @keyframes blink {
   0%, 100% {
     opacity: 1;

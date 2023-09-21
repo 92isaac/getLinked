@@ -20,3 +20,4 @@ export const wisper4 = `${imagePath}/wisper4.png`
 export const manonpadlock = `${imagePath}/manonpadlock.png`
 export const Vector = `${imagePath}/Vector.png`
 export const casualworker = `${imagePath}/casualworker.png`
+export const formBg = `${imagePath}/Rectangle 10.png`

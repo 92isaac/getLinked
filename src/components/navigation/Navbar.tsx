@@ -18,7 +18,7 @@ export const Navbar: React.FC = () => {
           <ul className="flex justify-between items-center gap-12">
             {navItems.map((item) => (
               <li key={item.id}>
-                <NavLink to="/" className="montserrat">
+                <NavLink to={item.path} className="montserrat">
                   {item.name}
                 </NavLink>
               </li>
