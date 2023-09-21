@@ -1,11 +1,12 @@
 import React from "react";
 import { rulesregulation } from "../../assets/images";
-import { PurplrBg } from "../../utils/purplrBg";
+import { PurpleBg } from '../../utils/PurpleBg'
+
 
 export const RulesAndRegulation: React.FC = () => {
   return (
     <div className="relative border-t-[0.1px] border-[#2e2053] z-30">
-      <PurplrBg className="w-2/3 -top-48 z-10 absolute"/>
+      <PurpleBg className="w-2/3 -top-48 z-10 absolute"/>
       <div className="flex flex-col-reverse md:flex md:flex-row justify-between items-center px-5 md:px-20 py-10">
         <div className="relative flex-1 text-center md:text-left z-30 ">
           <div className="relative">
@@ -24,7 +25,7 @@ export const RulesAndRegulation: React.FC = () => {
           </p>
         </div>
         <div className="flex-1">
-      <PurplrBg className="w-1/2 top-28 right-10 z-10 absolute"/>
+      <PurpleBg className="w-1/2 top-28 right-10 z-10 absolute"/>
           <img src={rulesregulation} alt="rules !" />
 
         </div>
