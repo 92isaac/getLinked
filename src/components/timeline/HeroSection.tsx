@@ -3,6 +3,8 @@ import { manWearGlass, starBall, title, underLine } from "../../assets/images";
 import { Button } from "../../utils/Button";
 import { PurpleBg } from '../../utils/PurpleBg'
 import { Countdowm } from "./Countdowm";
+import Typewriter from "../../anime/Typewriter";
+import SlideInLeft from "../../anime/SlideInLeft";
 
 export const HeroSection: React.FC = () => {
   return (
@@ -10,9 +12,11 @@ export const HeroSection: React.FC = () => {
       <PurpleBg className="w-1/2 -top-48 z-10 absolute"/>
       <div className="flex md:justify-end justify-center text-white">
         <div className="md:pr-10">
+          <Typewriter>
           <h3 className="md:text-2xl font-bold italic">
             Igniting a Revolution in HR Innovation
           </h3>
+          </Typewriter>
           <img
             src={underLine}
             alt="hero underline"
@@ -22,11 +26,13 @@ export const HeroSection: React.FC = () => {
       </div>
       <div className="md:flex justify-between montserrat">
         <div className="text-center md:text-left  pt-10 px-5 md:px-0">
+        <SlideInLeft>
           <img src={title} alt="" className="mx-auto" />
           <p className="text-xs">
             Participate in getlinked tech Hackathon 2023 stand
             <br className="hidden md:block"/> a chance to win a Big prize
           </p>
+        </SlideInLeft>
           <Button title="Register" className="mt-4 pt-2" OnClick/>
           <Countdowm className={`mt-5 md:mt-16 justify-center md:justify-start`}/>
         </div>
