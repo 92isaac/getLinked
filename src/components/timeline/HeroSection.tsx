@@ -5,9 +5,11 @@ import { PurpleBg } from '../../utils/PurpleBg'
 import { Countdowm } from "./Countdowm";
 import Typewriter from "../../anime/Typewriter";
 import SlideInLeft from "../../anime/SlideInLeft";
+import { useNavigate } from 'react-router-dom'
 
 export const HeroSection: React.FC = () => {
   const targetDate = new Date('2023-09-26');
+  const navigate = useNavigate()
 
   return (
     <section className="relative md:pl-20">
@@ -35,7 +37,7 @@ export const HeroSection: React.FC = () => {
             <br className="hidden md:block"/> a chance to win a Big prize
           </p>
         </SlideInLeft>
-          <Button title="Register" className="mt-4 pt-2" OnClick/>
+          <Button title="Register" className="mt-4 pt-2" OnClick={()=>navigate('/register')}/>
           <Countdowm className={`mt-5 md:mt-16 justify-center md:justify-start`} targetDate={targetDate}/>
         </div>
         <div className="relative">

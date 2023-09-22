@@ -27,7 +27,10 @@ const MobileNavbar: React.FC = () => {
             </li>
           ))}
         </ul>
-        <Button title="Register" className="montserrat" OnClick={()=>navigate('/register')} />
+        <Button title="Register" className="montserrat" OnClick={()=>{
+          navigate('/register');
+          handleChange();
+        }} />
       </div>
     </div>
   );
