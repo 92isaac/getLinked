@@ -21,3 +21,6 @@ export const manonpadlock = `${imagePath}/manonpadlock.png`
 export const Vector = `${imagePath}/Vector.png`
 export const casualworker = `${imagePath}/casualworker.png`
 export const formBg = `${imagePath}/Rectangle 10.png`
+export const graphicDesigner = `${imagePath}/graphic-designer.png`
+export const moving1 = `${imagePath}/moving1.png`
+export const moving2 = `${imagePath}/moving2.png`

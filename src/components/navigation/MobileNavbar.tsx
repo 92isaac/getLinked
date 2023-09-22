@@ -1,11 +1,12 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { UseContextGlobal } from "../../hooks/Context";
 import { Button } from "../../utils/Button";
 import { AiOutlineCloseCircle } from "react-icons/ai";
 
 const MobileNavbar: React.FC = () => {
   const { toggle, handleChange } = UseContextGlobal();
+  const navigate = useNavigate()
 
   return (
     <div>
@@ -26,7 +27,7 @@ const MobileNavbar: React.FC = () => {
             </li>
           ))}
         </ul>
-        <Button title="Register" className="montserrat" OnClick />
+        <Button title="Register" className="montserrat" OnClick={()=>navigate('/register')} />
       </div>
     </div>
   );

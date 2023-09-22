@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import { Button } from "../../utils/Button";
 import { CgMenuLeft } from "react-icons/cg";
 import { UseContextGlobal } from "../../hooks/Context";
@@ -7,6 +7,7 @@ import MobileNavbar from "./MobileNavbar";
 
 export const Navbar: React.FC = () => {
   const { handleChange, toggle } = UseContextGlobal();
+  const navigate = useNavigate()
   return (
     <nav className="fixed px-5 md:px-20 w-full bg-[#150E28] text-white py-6 border-b-[1px] border-[#2e2053] mx-auto z-50">
       <div className="flex justify-between items-center">
@@ -24,7 +25,7 @@ export const Navbar: React.FC = () => {
               </li>
             ))}
           </ul>
-          <Button title="Register" className="ml-10 montserrat" OnClick />
+          <Button title="Register" className="ml-10 montserrat" OnClick={()=>navigate('/register')} />
         </div>
         <div className="block md:hidden" onClick={handleChange}>
          {!toggle && <CgMenuLeft className="text-lg inline-block text-white" />}
