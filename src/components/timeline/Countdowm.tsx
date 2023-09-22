@@ -49,10 +49,10 @@ export const Countdowm:React.FC<CountdownProps> = ({className, targetDate}) => {
   return (
     <div className={`flex ${className} items-center`}>
         <div className="flex montserrat justify-between items-center gap-4 text-4xl">
-            {/* <h1 className='unica'>{timeLeft.days}<small className='text-[10px]'>D</small></h1> */}
-            <h1 className='unica'>{timeLeft.hours}<small className='text-[10px]'>H</small></h1>
-            <h1 className='unica'>{timeLeft.minutes}<small className='text-[10px]'>M</small></h1>
-            <h1 className='unica'>{timeLeft.seconds}<small className='text-[10px]'>S</small></h1>
+            {/* <h1 className='unica'>{timeLeft.days  <10 ? `0${timeLeft.days}` : timeLeft.days}<small className='text-[10px]'>D</small></h1> */}
+            <h1 className='unica'>{timeLeft.hours  <10 ? `0${timeLeft.hours}` : timeLeft.hours}<small className='text-[10px]'>H</small></h1>
+            <h1 className='unica'>{timeLeft.minutes <10 ? `0${timeLeft.minutes}` : timeLeft.minutes}<small className='text-[10px]'>M</small></h1>
+            <h1 className='unica'>{timeLeft.seconds <10 ? `0${timeLeft.seconds}` : timeLeft.seconds}<small className='text-[10px]'>S</small></h1>
         </div>
     </div>
   )
