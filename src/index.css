@@ -16,6 +16,11 @@
   font-family: 'Unica One', cursive;
 }
 
+a.active{
+background-image: linear-gradient(to right, #3b82f6, #8b5cf6, #ec4899);
+background-clip: text;
+color: transparent;
+}
 
 
 .bgImage{

@@ -24,3 +24,4 @@ export const formBg = `${imagePath}/Rectangle 10.png`
 export const graphicDesigner = `${imagePath}/graphic-designer.png`
 export const moving1 = `${imagePath}/moving1.png`
 export const moving2 = `${imagePath}/moving2.png`
+export const success = `${imagePath}/congratulation.png`

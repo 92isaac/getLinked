@@ -1,6 +1,8 @@
 import React from 'react'
 import { Outlet } from "react-router-dom";
 import { Navbar } from '../components/navigation/Navbar';
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 
 const SharedLayout:React.FC = () => {
@@ -9,6 +11,8 @@ const SharedLayout:React.FC = () => {
         <Navbar />
         <main className='pt-32 text-white'>
         <Outlet/>
+      <ToastContainer />
+        
         </main>
     </div>
   )

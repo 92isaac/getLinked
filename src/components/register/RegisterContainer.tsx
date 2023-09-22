@@ -1,8 +1,14 @@
 import React, { useEffect, useState } from "react";
-import { graphicDesigner, moving1, moving2 } from "../../assets/images";
+import {
+  graphicDesigner,
+  moving1,
+  moving2,
+  success,
+} from "../../assets/images";
 import { Button } from "../../utils/Button";
 import axios from "axios";
 import { BaseUrl } from "../../utils/data";
+import Modal from "../../utils/Modal";
 
 interface RegistrationState {
   team_name: string;
@@ -16,7 +22,11 @@ interface RegistrationState {
 
 export const RegisterContainer: React.FC = () => {
   const [category, setCategory] = useState([]);
-  const [modal, setModal] = useState(false);
+  const [modal, setModal] = useState(true);
+
+  const closeModal = () => {
+    setModal(false);
+  };
   const [register, setRegister] = useState<RegistrationState>({
     team_name: "",
     phone_number: "",
@@ -65,7 +75,7 @@ export const RegisterContainer: React.FC = () => {
       try {
         const data = await axios.get(`${BaseUrl}/hackathon/categories-list`);
         const result = data;
-        setCategory(result.data);
+        setCategory(result?.data);
       } catch (err) {
         console.log(err);
       }
@@ -243,6 +253,25 @@ export const RegisterContainer: React.FC = () => {
           </form>
         </div>
       </div>
+      {modal && (
+        <Modal isOpen={modal} onClose={closeModal}>
+          <div className="montserrat text-center">
+            <div className="mx-auto">
+              <img src={success} alt="registration success" className="object-cover" />
+            </div>
+            <div className="">
+              <h1 className="text-lg md:text-2xl leading-7 font-bold">
+                Congratulations <br />
+                you have successfully Registered!
+              </h1>
+              <p className="text-xs pb-3">
+                Yes, it was easy and you did it! <br />
+                check your mail box for next step
+              </p>
+            </div>
+          </div>
+        </Modal>
+      )}
     </div>
   );
 };
