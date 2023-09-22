@@ -1,8 +1,80 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { graphicDesigner, moving1, moving2 } from "../../assets/images";
 import { Button } from "../../utils/Button";
+import axios from "axios";
+import { BaseUrl } from "../../utils/data";
+
+interface RegistrationState {
+  team_name: string;
+  phone_number: string;
+  email: string;
+  project_topic: string;
+  category: string;
+  group_size: number;
+  privacy_policy_accepted: boolean;
+}
 
 export const RegisterContainer: React.FC = () => {
+  const [category, setCategory] = useState([]);
+  const [modal, setModal] = useState(false);
+  const [register, setRegister] = useState<RegistrationState>({
+    team_name: "",
+    phone_number: "",
+    email: "",
+    project_topic: "",
+    category: "",
+    group_size: 0,
+    privacy_policy_accepted: false,
+  });
+
+  const handleSubmit = async (e: { preventDefault: () => void }) => {
+    e.preventDefault();
+    try {
+      if (register.privacy_policy_accepted === true) {
+        console.log(register);
+        const response = await axios.post(
+          `${BaseUrl}/hackathon/registration`,
+          {
+            email: register.email,
+            phone_number: register.phone_number,
+            team_name: register.team_name,
+            group_size: register.group_size,
+            project_topic: register.project_topic,
+            category: register.category,
+            privacy_poclicy_accepted: register.privacy_policy_accepted,
+          },
+          {
+            headers: { "Content-Type": "application/json" },
+            withCredentials: true,
+          }
+        );
+        if (response.status === 200) {
+          setModal(true);
+        }
+        console.log("Response:", response.data);
+      } else {
+        alert("All field is reuired");
+      }
+    } catch (error) {
+      console.error("Error:", error);
+    }
+  };
+
+  useEffect(() => {
+    const getCategory = async () => {
+      try {
+        const data = await axios.get(`${BaseUrl}/hackathon/categories-list`);
+        const result = data;
+        setCategory(result.data);
+      } catch (err) {
+        console.log(err);
+      }
+    };
+    getCategory();
+  }, []);
+
+  console.log(modal);
+
   return (
     <div className="md:flex justify-between items-center md:px-32">
       <div className=" flex-1 px-5 text-xs montserrat">
@@ -36,43 +108,71 @@ export const RegisterContainer: React.FC = () => {
           </div>
           <form action="" className="text-xs text-white montserrat">
             <div className="grid md:grid-cols-2 gap-x-4">
-              <div className='py-2'>
-                <label htmlFor="name" className="block pb-1">Team's Name</label>
+              <div className="py-2">
+                <label htmlFor="name" className="block pb-1">
+                  Team's Name
+                </label>
                 <input
+                  required
                   type="text"
-                  title="name"
+                  title="team name"
+                  value={register.team_name}
                   placeholder="Enter your team name"
+                  onChange={(e) =>
+                    setRegister({ ...register, team_name: e.target.value })
+                  }
                   className="w-full border px-3 py-2 rounded-sm focus:border-[#FF26B9] focus:outline-none text-white bg-[#1C162F]"
                 />
               </div>
-              <div className='py-2'>
-                <label htmlFor="phone" className="block pb-1">Phone</label>
+              <div className="py-2">
+                <label htmlFor="phone" className="block pb-1">
+                  Phone
+                </label>
                 <input
+                  required
                   type="tel"
                   title="phone"
+                  value={register.phone_number}
+                  onChange={(e) =>
+                    setRegister({ ...register, phone_number: e.target.value })
+                  }
                   placeholder="Enter your phone number"
                   className="w-full border px-3 py-2 rounded-sm focus:border-[#FF26B9] focus:outline-none text-white bg-[#1C162F]"
                 />
               </div>
-              <div className='py-2'>
-                <label htmlFor="email" className="block pb-1">Email</label>
+              <div className="py-2">
+                <label htmlFor="email" className="block pb-1">
+                  Email
+                </label>
                 <input
+                  required
                   type="email"
                   title="email"
+                  value={register.email}
+                  onChange={(e) =>
+                    setRegister({ ...register, email: e.target.value })
+                  }
                   placeholder="Enter your email"
                   className="w-full border px-3 py-2 rounded-sm focus:border-[#FF26B9] focus:outline-none text-white bg-[#1C162F]"
                 />
               </div>
-              <div className='py-2'>
-                <label htmlFor="" className="block pb-1">Project Topic</label>
+              <div className="py-2">
+                <label htmlFor="" className="block pb-1">
+                  Project Topic
+                </label>
                 <input
+                  required
                   type="text"
                   title="project topic"
+                  value={register.project_topic}
+                  onChange={(e) =>
+                    setRegister({ ...register, project_topic: e.target.value })
+                  }
                   placeholder="What is your group project topic"
                   className="w-full border px-3 py-2 rounded-sm focus:border-[#FF26B9] focus:outline-none text-white bg-[#1C162F]"
                 />
               </div>
-              <div className='py-2'>
+              <div className="py-2">
                 <label htmlFor="category" className="block pb-1">
                   Category
                 </label>
@@ -80,19 +180,33 @@ export const RegisterContainer: React.FC = () => {
                   id="category"
                   name="category"
                   className="border border-[#8a8989] bg-[#1C162F] focus:border-[#FF26B9] focus:outline-none w-full py-2 px-3 rounded-sm"
+                  value={register.category}
+                  onChange={(e) =>
+                    setRegister({ ...register, category: e.target.value })
+                  }
                   placeholder="Select your category"
                 >
-                  <option value="male">Male</option>
-                  <option value="female">Female</option>
+                  {category?.map((categ: { name: string; id: string }) => (
+                    <option value={categ.name} key={categ.id}>
+                      {categ.name}
+                    </option>
+                  ))}
                 </select>
               </div>
-              <div className='py-2'>
+              <div className="py-2">
                 <label htmlFor="group-size" className="block pb-1">
                   Group Size
                 </label>
                 <select
                   id="group-size"
                   name="group-size"
+                  value={register.group_size}
+                  onChange={(e) =>
+                    setRegister({
+                      ...register,
+                      group_size: Number(e.target.value),
+                    })
+                  }
                   className="border border-[#8a8989] bg-[#1C162F] focus:border-[#FF26B9] focus:outline-none w-full py-2 px-3 rounded-sm"
                 >
                   <option value="male">Male</option>
@@ -100,7 +214,32 @@ export const RegisterContainer: React.FC = () => {
                 </select>
               </div>
             </div>
-              <Button title="Register" className="mt-4 pt-2 w-full" OnClick />
+            <div className="text-xs">
+              <p className="text-[9px] md:text-xs text-[#FF26B9] leading-6 md:leading-9">
+                Please review your registration details before submitting
+              </p>
+              <label htmlFor="checkbox" className="flex items-center">
+                <input
+                  required
+                  type="checkbox"
+                  title="checkbox"
+                  className="mr-4"
+                  checked={register.privacy_policy_accepted}
+                  onChange={(e) =>
+                    setRegister({
+                      ...register,
+                      privacy_policy_accepted: e.target.checked,
+                    })
+                  }
+                />{" "}
+                I agreed with the event terms and conditions and privacy policy
+              </label>
+            </div>
+            <Button
+              title="Register"
+              className="mt-4 pt-2 w-full"
+              OnClick={handleSubmit}
+            />
           </form>
         </div>
       </div>
