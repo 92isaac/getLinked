@@ -9,6 +9,7 @@ import { Button } from "../../utils/Button";
 import axios from "axios";
 import { BaseUrl } from "../../utils/data";
 import Modal from "../../utils/Modal";
+import { toast } from 'react-toastify'
 
 interface RegistrationState {
   team_name: string;
@@ -63,7 +64,8 @@ export const RegisterContainer: React.FC = () => {
         }
         console.log("Response:", response.data);
       } else {
-        alert("All field is reuired");
+        toast.error("All fields are required")
+        // alert("All field is reuired");
       }
     } catch (error) {
       console.error("Error:", error);
