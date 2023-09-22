@@ -53,7 +53,7 @@ export const PrivacyPolicyAndTerms: React.FC = () => {
                 </li>
               </ul>
               <div className="flex justify-center items-center">
-                <Button title="Read More" className="mt-7 pt-2" OnClick />
+                <Button title="Read More" className="mt-7 pt-2" OnClick={()=>{}} />
               </div>
             </div>
           </div>

@@ -7,12 +7,12 @@ export const BigIdea: React.FC = () => {
 
   return (
     <div className=" border-t-[0.1px] border-[#2e2053]">
-      <div className="md:flex justify-between items-center px-5 md:px-20 py-10">
-        <SlideInLeft>
+      <div className="md:flex justify-between gap-5 items-center px-5 md:px-20 py-10">
         <div className="flex-1">
+        <SlideInLeft>
           <img src={bigIdea} alt="big idea!" />
-        </div>
         </SlideInLeft>
+        </div>
         <div className="relative flex-1 text-center md:text-left ">
             <SlideUp>
           <div className="relative">

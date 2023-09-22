@@ -9,7 +9,7 @@ import { Button } from "../../utils/Button";
 import axios from "axios";
 import { BaseUrl } from "../../utils/data";
 import Modal from "../../utils/Modal";
-import { toast } from 'react-toastify'
+import { toast } from "react-toastify";
 
 interface RegistrationState {
   team_name: string;
@@ -64,7 +64,7 @@ export const RegisterContainer: React.FC = () => {
         }
         console.log("Response:", response.data);
       } else {
-        toast.error("All fields are required")
+        toast.error("All fields are required");
         // alert("All field is reuired");
       }
     } catch (error) {
@@ -259,7 +259,11 @@ export const RegisterContainer: React.FC = () => {
         <Modal isOpen={modal} onClose={closeModal}>
           <div className="montserrat text-center">
             <div className="mx-auto">
-              <img src={success} alt="registration success" className="object-cover" />
+              <img
+                src={success}
+                alt="registration success"
+                className="object-cover"
+              />
             </div>
             <div className="">
               <h1 className="text-lg md:text-2xl leading-7 font-bold">

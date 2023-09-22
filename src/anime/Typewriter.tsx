@@ -1,5 +1,5 @@
 // src/components/Typewriter.tsx
-import React, { Fragment } from 'react';
+import React from 'react';
 import TypeIt from "typeit-react";
 
 
@@ -10,7 +10,7 @@ interface TypewriterProps {
 
 
 const Typewriter: React.FC<TypewriterProps> = ({ children }) => {
-  return <TypeIt element={Fragment}>{children}</TypeIt>;
+  return <TypeIt element={"span"}>{children}</TypeIt>;
 };
 
 export default Typewriter;

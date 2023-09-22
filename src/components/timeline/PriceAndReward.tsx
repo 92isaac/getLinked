@@ -3,6 +3,7 @@ import { reward, trophy } from "../../assets/images";
 import SlideUp from "../../anime/SlidesUp";
 import SlideInLeft from "../../anime/SlideInLeft";
 import SlideInRight from "../../anime/SlideInRight";
+import { PurpleBg } from "../../utils/PurpleBg";
 
 export const PriceAndReward: React.FC = () => {
   return (
@@ -22,10 +23,11 @@ export const PriceAndReward: React.FC = () => {
         </div>
       </div>
       <div className="flex flex-col md:flex md:flex-row justify-between items-center px-5 md:px-20 pb-10">
-        <div className="flex-1 mb-16 md:mb-0">
+        <div className="flex-1 mb-16 md:mb-0 relative">
           <SlideInLeft>
-          <img src={trophy} alt="trophy!" />
+          <img src={trophy} alt="trophy!" className="relative z-30"/>
           </SlideInLeft>
+          <PurpleBg className="absolute -top-32 z-10 "/>
         </div>
         <div className="relative flex-1 text-center md:text-left ">
          <SlideInRight>

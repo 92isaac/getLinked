@@ -31,7 +31,7 @@ export const RulesAndRegulation: React.FC = () => {
         <div className="flex-1">
       <PurpleBg className="w-1/2 top-28 right-10 z-10 absolute"/>
       <SlideInLeft>
-          <img src={rulesregulation} alt="rules !" />
+          <img src={rulesregulation} alt="rules !" className="relative z-30"/>
       </SlideInLeft>
 
         </div>
