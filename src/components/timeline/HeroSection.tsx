@@ -7,6 +7,8 @@ import Typewriter from "../../anime/Typewriter";
 import SlideInLeft from "../../anime/SlideInLeft";
 
 export const HeroSection: React.FC = () => {
+  const targetDate = new Date('2023-09-26');
+
   return (
     <section className="relative md:pl-20">
       <PurpleBg className="w-1/2 -top-48 z-10 absolute"/>
@@ -34,7 +36,7 @@ export const HeroSection: React.FC = () => {
           </p>
         </SlideInLeft>
           <Button title="Register" className="mt-4 pt-2" OnClick/>
-          <Countdowm className={`mt-5 md:mt-16 justify-center md:justify-start`}/>
+          <Countdowm className={`mt-5 md:mt-16 justify-center md:justify-start`} targetDate={targetDate}/>
         </div>
         <div className="relative">
       <PurpleBg className="w-full -top-32 z-10 absolute"/>
