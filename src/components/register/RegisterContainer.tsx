@@ -22,7 +22,7 @@ interface RegistrationState {
 
 export const RegisterContainer: React.FC = () => {
   const [category, setCategory] = useState([]);
-  const [modal, setModal] = useState(true);
+  const [modal, setModal] = useState(false);
 
   const closeModal = () => {
     setModal(false);
