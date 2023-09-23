@@ -20,9 +20,13 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ size = "medium" }) => {
 
   return (
     <div className="flex items-center justify-center h-screen">
-      <div
-        className={`loader ease-linear rounded-full border-4 border-t-4 ${sizeClasses} border-gray-200`}
-      ></div>
+      <div>
+        <div
+          className={`loader ease-linear border-[#FF26B9] rounded-full border-4 border-t-4 ${sizeClasses} border-gray-200`}
+        >
+        </div>
+          <span className="spiner">loading...</span>
+      </div>
     </div>
   );
 };

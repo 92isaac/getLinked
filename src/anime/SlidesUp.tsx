@@ -15,11 +15,11 @@ const SlideUp: React.FC<SlideUpProps> = ({ children }) => {
           if (entry.isIntersecting) {
             entry.target.classList.add('animate-slide-up');
           } else {
-            entry.target.classList.remove('animate-slide-up'); // Remove animation when not in view
+            entry.target.classList.remove('animate-slide-up'); // 
           }
         });
       },
-      { threshold: 0 } // Trigger when completely in view
+      { threshold: 0 } // 
     );
 
     if (elementRef.current) {
@@ -31,7 +31,7 @@ const SlideUp: React.FC<SlideUpProps> = ({ children }) => {
         observer.unobserve(elementRef.current);
       }
     };
-  }, []); // Run only on mount and unmount
+  }, []); // 
 
   return <div ref={elementRef}>{children}</div>;
 };

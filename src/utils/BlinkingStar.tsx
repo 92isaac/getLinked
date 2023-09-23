@@ -13,7 +13,7 @@ const BlinkingStar: React.FC<BlinkingStarProps> = ({ colour, className }) => {
   useEffect(() => {
     const interval = setInterval(() => {
       setColor(prevColor => prevColor === 'white' ? colour : 'white');
-    }, 1000);
+    }, 500);
 
     return () => clearInterval(interval);
   }, [colour]);

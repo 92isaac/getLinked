@@ -3,6 +3,10 @@
 @tailwind components;
 @tailwind utilities;
 
+body{
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
 
 .class-display{
   font-family: 'Clash Display', sans-serif;
@@ -22,6 +26,11 @@ background-clip: text;
 color: transparent;
 }
 
+.spiner{
+  background-image: linear-gradient(to right, #3b82f6, #8b5cf6, #ec4899);
+background-clip: text;
+color: transparent;
+}
 
 .bgImage{
   background: url(../Rectangle\ 10.png);

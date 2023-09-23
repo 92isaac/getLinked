@@ -15,11 +15,11 @@ const SlideInRight: React.FC<SlideUpProps> = ({ children }) => {
           if (entry.isIntersecting) {
             entry.target.classList.add('animate-slide-in-right');
           } else {
-            entry.target.classList.remove('animate-slide-in-right'); // Remove animation when not in view
+            entry.target.classList.remove('animate-slide-in-right'); // 
           }
         });
       },
-      { threshold: 0 } // Trigger when completely in view
+      { threshold: 0 } // 
     );
 
     if (elementRef.current) {
@@ -31,7 +31,7 @@ const SlideInRight: React.FC<SlideUpProps> = ({ children }) => {
         observer.unobserve(elementRef.current);
       }
     };
-  }, []); // Run only on mount and unmount
+  }, []); // 
 
   return <div ref={elementRef}>{children}</div>;
 };
