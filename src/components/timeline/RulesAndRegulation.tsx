@@ -3,6 +3,7 @@ import { rulesregulation } from "../../assets/images";
 import { PurpleBg } from '../../utils/PurpleBg'
 import SlideUp from "../../anime/SlidesUp";
 import SlideInLeft from "../../anime/SlideInLeft";
+import BlinkingStar from "../../utils/BlinkingStar";
 
 
 export const RulesAndRegulation: React.FC = () => {
@@ -36,6 +37,8 @@ export const RulesAndRegulation: React.FC = () => {
 
         </div>
       </div>
+      <BlinkingStar colour="purple" className="absolute top-24 right-[60%]"/>
+      <BlinkingStar colour="#3f3e3e" className="absolute bottom-40 right-[40%]"/>
     </div>
   );
 };

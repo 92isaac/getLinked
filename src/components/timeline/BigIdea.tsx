@@ -2,6 +2,7 @@ import React, {  } from "react";
 import { bigIdea } from "../../assets/images";
 import SlideUp from "../../anime/SlidesUp";
 import SlideInLeft from "../../anime/SlideInLeft";
+import BlinkingStar from "../../utils/BlinkingStar";
 
 export const BigIdea: React.FC = () => {
 
@@ -31,6 +32,7 @@ export const BigIdea: React.FC = () => {
             solutions that can change the world, that's what we're all about!
           </p>
             </SlideUp>
+      <BlinkingStar colour="purple" className="absolute top-5 right-[15%]"/>
         </div>
       </div>
     </div>

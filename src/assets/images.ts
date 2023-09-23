@@ -25,3 +25,4 @@ export const graphicDesigner = `${imagePath}/graphic-designer.png`
 export const moving1 = `${imagePath}/moving1.png`
 export const moving2 = `${imagePath}/moving2.png`
 export const success = `${imagePath}/congratulation.png`
+export const star = `${imagePath}/star.png`

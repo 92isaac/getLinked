@@ -6,6 +6,7 @@ import { Countdowm } from "./Countdowm";
 import Typewriter from "../../anime/Typewriter";
 import SlideInLeft from "../../anime/SlideInLeft";
 import { useNavigate } from "react-router-dom";
+import BlinkingStar from "../../utils/BlinkingStar";
 
 export const HeroSection: React.FC = () => {
   const targetDate = new Date("2023-09-26");
@@ -59,6 +60,10 @@ export const HeroSection: React.FC = () => {
           </div>
         </div>
       </div>
+      <BlinkingStar colour="purple" className="absolute -bottom-60"/>
+      <BlinkingStar colour="#3f3e3e" className="absolute bottom-40 right-[60%]"/>
+      <BlinkingStar colour="gold" className="absolute top-20 right-[45%]"/>
+      <BlinkingStar colour="gray" className="absolute top-0"/>
     </section>
   );
 };

@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { FaStar } from 'react-icons/fa';
+// import { star } from '../assets/images';
 
 interface BlinkingStarProps {
   colour: string;
+  className:string;
 }
 
-const BlinkingStar: React.FC<BlinkingStarProps> = ({ colour }) => {
+const BlinkingStar: React.FC<BlinkingStarProps> = ({ colour, className }) => {
   const [color, setColor] = useState('white');
 
   useEffect(() => {
@@ -17,8 +19,9 @@ const BlinkingStar: React.FC<BlinkingStarProps> = ({ colour }) => {
   }, [colour]);
 
   return (
-    <div className="text-4xl py-3" style={{ color }}>
-      <FaStar  className="w-4 " />
+    <div className="text-4xl" style={{ color }}>
+      <FaStar  className={`w-4 ${className}`} />
+      {/* <img src={star} alt="star" className="w-4 "/> */}
     </div>
   );
 };
