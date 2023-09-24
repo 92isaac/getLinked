@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import React, { useEffect, useState } from "react";
 import {
   graphicDesigner,
@@ -62,13 +63,14 @@ export const RegisterContainer: React.FC = () => {
         if (response.status === 200) {
           setModal(true);
         }
-        console.log("Response:", response.data);
+        // console.log("Response:", response.data);
       } else {
         toast.error("All fields are required");
         // alert("All field is reuired");
       }
-    } catch (error) {
-      console.error("Error:", error);
+    } catch (error:any) {
+      toast.error(error.message);
+      // console.error("Error:", error);
     }
   };
 
