@@ -26,3 +26,6 @@ export const moving1 = `${imagePath}/moving1.png`
 export const moving2 = `${imagePath}/moving2.png`
 export const success = `${imagePath}/congratulation.png`
 export const star = `${imagePath}/star.png`
+export const qFirst = `${imagePath}/firstq.png`
+export const qSecond = `${imagePath}/secondq.png`
+export const qthird = `${imagePath}/thirdq.png`

@@ -1,5 +1,5 @@
 import React from "react";
-import { casualworker } from "../../assets/images";
+import { casualworker, qFirst, qSecond, qthird } from "../../assets/images";
 import Accordion from "../../utils/Accordion";
 import SlideInLeft from "../../anime/SlideInLeft";
 import SlideUp from "../../anime/SlidesUp";
@@ -7,7 +7,7 @@ import SlideUp from "../../anime/SlidesUp";
 export const Faqs: React.FC = () => {
   return (
     <div className=" border-t-[0.1px] border-[#2e2053]" id="#">
-      <div className="flex flex-col md:flex md:flex-row justify-between items-center px-8 md:px-20 py-10">
+      <div className="flex flex-col md:flex md:flex-row gap-8 justify-between items-center px-8 md:px-20 py-10">
         <div className="relative flex-1 text-center md:text-left z-30">
           <SlideUp>
           <div className="relative">
@@ -28,10 +28,13 @@ export const Faqs: React.FC = () => {
           ))}
           </SlideUp>
         </div>
-        <div className="flex-1 ">
+        <div className="flex-1 relative">
           <SlideInLeft>
-          <img src={casualworker} alt="rules !" className="relative z-30"/>
+          <img src={casualworker} alt="rules !" className="relative z-30 pt-16"/>
           </SlideInLeft>
+          <img src={qSecond} alt="" className="absolute w-[10%] md:w-auto top-0 md:-top-10 left-[36%] md:left-[30%]" />
+          <img src={qthird} alt="" className="absolute w-[10%] md:w-auto top-10 left-[60%]" />
+          <img src={qFirst} alt="" className="absolute w-[10%] md:w-auto top-10 left-10" />
         </div>
       </div>
     </div>
