@@ -26,6 +26,7 @@ export const EventTimeline: React.FC = () => {
       </SlideInLeft>
 
       {isSmallScreen ? (
+        <SlideInRight>
         <div className="max-h-[100%] flex">
             <div className="w-2  bg-[#D434FE] max-h-[100%]"></div>
           <div className="relative max-h-[100%]">
@@ -154,6 +155,7 @@ export const EventTimeline: React.FC = () => {
             </div>
           </div>
         </div>
+        </SlideInRight>
       ) : (
         <div className="relative grid md:grid-cols-2 md:pt-20 gap-x-32 pl-6 md:px-20 text-sm">
           <div className="absolute md:left-1/2 top-6">
