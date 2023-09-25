@@ -2,6 +2,8 @@ import { lazy, Suspense } from "react";
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import LoadingSpinner from "./utils/LoadingSpinner";
+import ScrollToTop from "./hooks/ScrollToTop";
+import ScrollToAnchor from "./hooks/ScrollToAnchor";
 
 const NoRoute = lazy(() => import("./routes/NoRoute"));
 const Contact = lazy(() => import("./routes/Contact"));
@@ -12,8 +14,11 @@ const SharedLayout = lazy(() => import("./routes/SharedLayout"));
 const TimeLine = lazy(() => import("./routes/Timeline"));
 
 function App() {
+
   return (
     <Suspense fallback={<LoadingSpinner size="large" />}>
+      <ScrollToTop />
+      <ScrollToAnchor />
       <Routes>
         <Route path="/" element={<SharedLayout />}>
           <Route path="/" element={<TimeLine />} />

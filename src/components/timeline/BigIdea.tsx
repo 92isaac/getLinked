@@ -7,7 +7,7 @@ import BlinkingStar from "../../utils/BlinkingStar";
 export const BigIdea: React.FC = () => {
 
   return (
-    <div className=" border-t-[0.1px] border-[#2e2053]">
+    <div className=" border-t-[0.1px] border-[#2e2053]" id="#overview">
       <div className="md:flex justify-between gap-5 items-center px-5 md:px-20 py-10">
         <div className="flex-1">
         <SlideInLeft>

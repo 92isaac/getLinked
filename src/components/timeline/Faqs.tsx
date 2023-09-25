@@ -1,12 +1,18 @@
 import React from "react";
+// import { useLocation } from 'react-router-dom'
 import { casualworker, qFirst, qSecond, qthird } from "../../assets/images";
 import Accordion from "../../utils/Accordion";
 import SlideInLeft from "../../anime/SlideInLeft";
 import SlideUp from "../../anime/SlidesUp";
 
 export const Faqs: React.FC = () => {
+  // const {pathname} = useLocation()
+  // if(pathname !== '/#faqs') {
+  //   console.log(pathname)
+  // }
+
   return (
-    <div className=" border-t-[0.1px] border-[#2e2053]" id="#">
+    <div className=" border-t-[0.1px] border-[#2e2053]" id="#faqs">
       <div className="flex flex-col md:flex md:flex-row gap-8 justify-between items-center px-8 md:px-20 py-10">
         <div className="relative flex-1 text-center md:text-left z-30">
           <SlideUp>

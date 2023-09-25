@@ -4,6 +4,7 @@ import { Button } from "../../utils/Button";
 import { CgMenuLeft } from "react-icons/cg";
 import { UseContextGlobal } from "../../hooks/Context";
 import MobileNavbar from "./MobileNavbar";
+import ScrollToAnchor from "../../hooks/ScrollToAnchor";
 
 export const Navbar: React.FC = () => {
   const { handleChange, toggle } = UseContextGlobal();
@@ -32,6 +33,7 @@ export const Navbar: React.FC = () => {
         </div>
       </div>
       {toggle && <MobileNavbar />}
+      <ScrollToAnchor/>
     </nav>
   );
 };
