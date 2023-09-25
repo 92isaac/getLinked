@@ -92,7 +92,7 @@ export const RegisterContainer: React.FC = () => {
   return (
     <div className="md:flex justify-between items-center md:px-32">
       <div className=" flex-1 px-5 text-xs montserrat">
-        <img src={graphicDesigner} alt="" />
+        <img src={graphicDesigner} alt="" className="dance"/>
       </div>
       <div
         className={`flex-1 px-5 w-full bg-no-repeat bg-cover shadow-md bgImage`}
