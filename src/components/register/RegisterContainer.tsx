@@ -186,6 +186,7 @@ export const RegisterContainer: React.FC = () => {
                   className="w-full border px-3 py-2 rounded-sm focus:border-[#FF26B9] focus:outline-none text-white bg-[#1C162F]"
                 />
               </div>
+              {/* <div className="flex"> */}
               <div className="py-2">
                 <label htmlFor="category" className="block pb-1">
                   Category
@@ -223,10 +224,12 @@ export const RegisterContainer: React.FC = () => {
                   }
                   className="border border-[#8a8989] bg-[#1C162F] focus:border-[#FF26B9] focus:outline-none w-full py-2 px-3 rounded-sm"
                 >
-                  <option value="male">Male</option>
-                  <option value="female">Female</option>
+                  <option value="10">10</option>
+                  <option value="20">20</option>
+                  <option value="30">30</option>
                 </select>
               </div>
+            {/* </div> */}
             </div>
             <div className="text-xs">
               <p className="text-[9px] md:text-xs text-[#FF26B9] leading-6 md:leading-9">

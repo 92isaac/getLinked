@@ -36,7 +36,7 @@ export const Faqs: React.FC = () => {
         </div>
         <div className="flex-1 relative">
           <SlideInLeft>
-          <img src={casualworker} alt="rules !" className="relative z-30 pt-16"/>
+          <img src={casualworker} alt="rules !" className="relative z-30 pt-16 dance"/>
           </SlideInLeft>
           <img src={qSecond} alt="" className="absolute w-[10%] md:w-auto top-0 md:-top-10 left-[36%] md:left-[30%]" />
           <img src={qthird} alt="" className="absolute w-[10%] md:w-auto top-10 left-[60%]" />

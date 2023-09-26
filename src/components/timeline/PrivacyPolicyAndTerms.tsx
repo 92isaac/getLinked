@@ -68,7 +68,7 @@ export const PrivacyPolicyAndTerms: React.FC = () => {
         <img
           src={Vector}
           alt=""
-          className="absolute bottom-56 right-10 md:top-20 md:right-40 z-10 w-[60%] md:w-[25%]"
+          className="absolute bottom-56 right-10 md:top-20 md:right-40 z-10 w-[60%] md:w-[25%] dance"
         />
       </div>
     </div>

@@ -9,7 +9,7 @@ import { useNavigate } from "react-router-dom";
 import BlinkingStar from "../../utils/BlinkingStar";
 
 export const HeroSection: React.FC = () => {
-  const targetDate = new Date("2023-09-26");
+  const targetDate = new Date("2023-09-28");
   const navigate = useNavigate();
 
   return (

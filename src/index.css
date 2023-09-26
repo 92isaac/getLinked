@@ -112,7 +112,7 @@ color: transparent;
 }
 
 .rotate-image {
-  animation: rotate 5s linear infinite; /* Adjust the duration and timing function as needed */
+  animation: rotate 13s linear infinite; 
 }
 
 .dance{
