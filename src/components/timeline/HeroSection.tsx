@@ -53,7 +53,7 @@ export const HeroSection: React.FC = () => {
         <div className="relative">
           <PurpleBg className="w-full -top-32 z-10 absolute" />
           <div className="absolute right-0 z-10">
-            <img src={starBall} alt="" className="z-10 -ml-4 w-[87%] md:w-auto rotate-image" />
+            <img src={starBall} alt="" className="z-10 -ml-4 w-[85%] md:w-[85%] rotate-image" />
           </div>
           <div className="top-10 right-0 z-50">
             <img src={manWearGlass} alt="" className="z-10" />
